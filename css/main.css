@@ -1,0 +1,12 @@
+#intro {
+	background: url('../img/2228546085_8bbe4b4547_o.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	color: #fff;
+}
+#intro h1 {
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+
