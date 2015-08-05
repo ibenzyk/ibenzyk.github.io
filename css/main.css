@@ -1,12 +1,99 @@
 #intro {
-	background: url('../img/2228546085_8bbe4b4547_o.jpg');
+	background: url('../img/2228546085_8bbe4b4547_o_copy.jpg');
 	background-attachment: fixed;
 	background-size: cover;
 	color: #fff;
 }
+#contact {
+	background: url('../img/3044867827_fa1c4b4303_o_copy.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	color: #fff;
+}
+#contact h1{
+	font-weight: 700;
+}
+#contact input {
+	font-weight: bold;
+}
 #intro h1 {
 	font-weight: 700;
 	text-transform: uppercase;
+	margin-top: 70px;
 }
+#intro a {
+	margin: 35px 15px
+}
+#services h1, #team h1, #contact h1 {
+	text-transform: uppercase;
+}
+.section-header, .about-header, .contact-header {
+	padding-bottom: 75px;
+}
+.service-icon {
+	font-size: 55px;
+	float: left;
+	margin-right: 25px;
+	width: 55px;
+	line-height: 1;
+}
+.service {
+	text-align: left;
+	margin-bottom: 55px;
+}
+.service h4 {
+	font-weight: 700;
+}
+.service p {
+	color: #808080;
+}
+.team-member .profile-pic {
+	border-radius: 50%;
+	width: 174px;
+	height: 174px;
+	margin: auto auto 25px;
+	overflow: hidden;
+}
+.team-member .position {
+	font-size: 13px;
+	margin-top: 15px;
+}
+.team-member .social-icons {
+	margin-bottom: 25px;
+}
+.team-member .social-icons ul {
+	padding-left: 0px !important;
+}
+.team-member .social-icons ul li {
+	display: inline-block;
+	line-height: 32px;
+	margin: 6px;
+	list-style: outside none none;
+}
+.team-member .social-icons ul li a {
+	font-size: 18px;
+	color: #808080;
 
-
+}
+.team-member {
+	margin-top: 75px;
+}
+.member-details h4 {
+	font-weight: 700;
+}
+.red-border-bottom h4::before {
+	z-index: 1;
+	width: 75%;
+	background: #e96656 none repeat scroll 0% 0%;
+	bottom: -9px;
+	left: 12.5%;
+	height: 2px;
+	position: absolute;	
+}
+.form-textarea {
+	margin-top: 25px;
+}
+.form-button {
+	margin: 15px;
+	text-align: right;
+}
