@@ -10,6 +10,10 @@
 	background-size: cover;
 	color: #fff;
 }
+#contact .container {
+	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 5px;
+}
 #contact h1{
 	font-weight: 700;
 }
@@ -73,6 +77,12 @@
 .team-member .social-icons ul li a {
 	font-size: 18px;
 	color: #808080;
+	transition: all 700ms ease 0s;
+
+}
+.team-member .social-icons ul li a:hover {
+	font-size: 18px;
+	color: #18bc9c;
 
 }
 .team-member {
