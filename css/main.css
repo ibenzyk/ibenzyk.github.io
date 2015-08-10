@@ -34,6 +34,12 @@
 .section-header, .about-header, .contact-header {
 	padding-bottom: 75px;
 }
+.services-section .service {
+	transition: all 700ms ease 0s;
+}
+.services-section .service:hover {
+	color: #18bc9c;
+}
 .service-icon {
 	font-size: 55px;
 	float: left;
@@ -105,5 +111,12 @@
 }
 .form-button {
 	margin: 15px;
+	text-align: right;
+}
+#banking-intro ul {
+	text-align: left;
+	font-size: 16px;
+}
+#banking-intro p {
 	text-align: right;
 }
