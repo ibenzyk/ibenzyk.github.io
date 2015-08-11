@@ -39,6 +39,7 @@
 }
 .services-section .service:hover {
 	color: #18bc9c;
+	cursor: pointer;
 }
 .service-icon {
 	font-size: 55px;
@@ -109,14 +110,31 @@
 .form-textarea {
 	margin-top: 25px;
 }
+.form-textarea textarea {
+	font-size: 16px;
+}
 .form-button {
 	margin: 15px;
 	text-align: right;
 }
-#banking-intro ul {
+#sub-intro ul {
 	text-align: left;
 	font-size: 16px;
 }
-#banking-intro p {
+#sub-intro p {
 	text-align: right;
+}
+.sub-section h1 {
+	margin-bottom: 25px;
+}
+.footer-below a, .footer-contact a {
+	text-decoration: none;
+	color: #fff;
+	transition: all 700ms ease 0s;
+}
+.footer-below a:hover, .footer-contact a:hover {
+	color: #18bc9c;
+}
+.footer-contact p {
+	font-size: 16px;
 }
