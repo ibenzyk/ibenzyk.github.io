@@ -6,8 +6,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <mata name="keywords" content="">
+    <meta name="description" content="Юрист Онлайн - агентство качественной и быстрой юридической помощи по гражданскому и административному праву">
+    <meta name="author" content="Iegor Benzyk">
 
     <title>Онлайн консультация юриста</title>
 
@@ -252,7 +253,7 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- About Section -->
     <section id="about" class="about-section">
         <div class="container">
             <div class="row about-header">
@@ -396,21 +397,21 @@
                     <h4>Задайте нам вопрос и мы вскоре свяжемся с Вами</h4>
                 </div>
             </div>
-            <form>
+            <form id="ajax-contact" method="post" action="mailer.php">
                 <div class="row">
                     <div class="col-sm-4">
-                        <input id="name" class="form-control" type="text" placeholder="Ваше Имя" name="name"></input>
+                        <input id="name" class="form-control" type="text" placeholder="Ваше Имя" name="name" required></input>
                     </div>
                     <div class="col-sm-4">
-                        <input id="email" class="form-control" type="email" placeholder="Ваше email" name="email"></input>
+                        <input id="email" class="form-control" type="email" placeholder="Ваш email" name="email" required></input>
                     </div>
                     <div class="col-sm-4">
-                        <input id="tel" class="form-control" type="tel" placeholder="Ваш номер телефона" name="tel"></input>
+                        <input id="tel" class="form-control" type="tel" placeholder="Ваш номер телефона" name="tel" required></input>
                     </div>
                 </div>
                 <div class="row form-textarea">
                     <div class="col-sm-12">
-                        <textarea id="message" class="form-control" rows="8" placeholder="Ваш вопрос" name="message"></textarea>
+                        <textarea id="message" class="form-control" rows="8" placeholder="Ваш вопрос" name="message" required></textarea>
                     </div>
                 </div>
                 <div class="form-button">
@@ -478,6 +479,7 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+    <script src="js/jquery-2.1.4.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -485,6 +487,9 @@
     <!-- Scrolling Nav JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
+
+    <!-- jQuery for form submitting -->
+    <script src="js/form.js"></script>
 
 </body>
 

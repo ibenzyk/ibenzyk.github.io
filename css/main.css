@@ -28,7 +28,7 @@
 #intro a {
 	margin: 35px 15px
 }
-#services h1, #team h1, #contact h1 {
+#about h1, #contact h1, #services h1, #team h1 {
 	text-transform: uppercase;
 }
 .section-header, .about-header, .contact-header {
