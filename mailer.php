@@ -2,6 +2,12 @@
 
     // Only process POST reqeusts.
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    	//parameters to DB
+    	$servername = "ibenzyk.mysql.ukraine.com.ua";
+		$username = "ibenzyk_db";
+		$password = "UkmETFqY";
+		$dbname = "ibenzyk_db";
+
         // Get the form fields and remove whitespace.
         $name = strip_tags(trim($_POST["name"]));
 				$name = str_replace(array("\r","\n"),array(" "," "),$name);
@@ -18,8 +24,7 @@
         }
 
         // Set the recipient email address.
-        // FIXME: Update this to your desired email address.
-        $recipient = "grbes@meta.ua";
+        $recipient = "iegorbenzyk@gmail.com";
 
         // Set the email subject.
         $subject = "Новое сообщение от $name";
@@ -32,6 +37,26 @@
 
         // Build the email headers.
         $email_headers = "From: $name <$email>";
+
+        //try to save personal information to DB
+        try {
+		    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+		    // set the PDO error mode to exception
+		    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		    $conn->exec("set names utf8");
+		    // prepare sql and bind parameters
+		    $stmt = $conn->prepare("INSERT INTO Persons (name, email, tel) VALUES(:name, :email, :tel) ON DUPLICATE KEY UPDATE name=VALUES(name), tel=VALUES(tel)");
+		    //VALUES (:name, :email, :tel)");
+		    $stmt->bindParam(':name', $name);
+		    $stmt->bindParam(':email', $email);
+		    $stmt->bindParam(':tel', $tel);
+		    $stmt->execute();
+
+		} catch(PDOException $e) {
+			//
+		}
+		$conn = null;
+
 
         // Send the email.
         if (mail($recipient, $subject, $email_content, $email_headers)) {
